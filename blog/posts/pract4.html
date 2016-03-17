@@ -93,8 +93,21 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   <div id="first">
                     <p>Fourth project (Eliminación del Switch Smell):</p>
-                    <a href="http://ull-esit-gradoii-dsi.github.io/tareas-iniciales-rossiel-nitesh-nico/">Eliminación del <i>Switch Smell</i></a>
+                    <a href="http://ull-esit-gradoii-dsi.github.io/eliminacion-del-switch-smell-rossiel-nitesh-nico1/">Eliminación del <i>Switch Smell</i></a>
                     <br><br><br><h3>Requirements:</h3>
+<p>En la práctica anterior modificamos el código del conversor de temperaturas para que usara objetos y herencia.</p>
+<p>En dicha práctica definimos las clases Medida, Temperatura(que hereda de Medida) así como las clases Celsius, Fahrenheit, Kelvin, etc. que heredan de Temperatura.</p>
+<p>En la solución que aportó en la práctica de iniciación a la OOP en JavaScript posiblemente usaba bien un switch, bien un if elsepara a partir de la entrada determinar el tipo de conversión necesaria: ¿Que clase usar? Celsius o Kelvin? y también para determinar ¿Que método usar toFahrenheit o toCelsius?.</p>
+<p>Es mejor que la función convertir reciba un parámetro de entrada y retorne el resultado y no dependa de elementos externos como el DOM de manera que se pueda aislar en una librería</p>
+<p>La expresión regular se computa cada vez que se llama a convertir. Esto conlleva un tiempo de cómputo innecesario ya que la expresión regular es una constante que puede sacarse fuera de convertir</p>
+<p>Es mejor tener aisladas las clases en distintos ficheros. Una posible solución es tener un fichero para Medida otro para Temperatura (en el que guardar todas las clases Temperatura) y quizá otro para el programa principal (main).</p>
+<p>Ahora convertires una función global, un método del objeto window. Es mejor encapsularlo algo mas y que sea un método de clase de la clase Medida.</p>
+<p>Como señalamos en la sección Code Smells el uso de un switch con dependencia de las clases es siempre un punto débil: si introducimos nuevas clases, por ejemplo, Rankine deberemos modificar además del código de las clases Temperature el código de conversión introduciendo un nuevo case. Viola el principio Open/Closed.</p>
+<p>Aunque no aparece en el código anterior, la expresión regular usada en el código original también presenta varias debilidades.</p>
+<p>Una de ellas es que es que no escala si se introducen nuevas clases. La clase usada [fck] impide que, por ejemplo, en el futuro, una r para Rankine sea aceptada.</p>
+<p>Otra es que la expresión regular se construye dentro del código de la función convertir. cada vez que convertires llamada la XRegExp es compilada. Podemos convertirla en una constante de la clase y compilarla una sola vez evitando así un coste innecesario de re-computo</p>
+<p>El uso excesivo de constantes de tipo String como 'k', 'c', etc. Corremos el riesgo de escribirlas de forma inconsistente en algún momento.</p>
+<p>De hecho, en el diseño de algunas prácticas de los alumnos he podido ver que métodos como toCelsius o toKelvin devuelven un Stringcon la conversión. Sería mas consistente que toCelsiusdevolviera un objeto de la clase Celsiusy toKelvinuno de la clase Kelvin</p>
                   </div>
                 </div>
             </div>

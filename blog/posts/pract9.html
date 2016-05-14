@@ -78,8 +78,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Ajax:</h1>
-                        <span class="meta">Posted by <a href="#">Nitesh Gul Ramnani</a> on April 20th, 2016</span>
+                        <h1>CSV using MongoDB:</h1>
+                        <span class="meta">Posted by <a href="#">Nitesh Gul Ramnani</a> on April 25th, 2016</span>
                     </div>
                 </div>
             </div>
@@ -92,17 +92,18 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                   <div id="first">
-                    <p>Eighth Project: CSV with AJAX:</p>
-                    <a href="https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-rossiel-nitesh-nico1">CSV with AJAX</a>
+                    <p>Nineth Project: CSV using MongoDB:</p>
+                    <a href="https://github.com/ULL-ESIT-GRADOII-DSI/mongodb-mongoose-csv-rossiel-nitesh-nico1">CSV using MongoDB</a>
                     <br><br><br><h3>Requirements:</h3>
-                    <p>El requisito de practicar un request AJAX usando jQuery:</p>
-                    <p>El navegador/cliente lee la cadena con los datos de entrada y se los envía usando AJAX al servidor, el cual calcula y devuelve en JSON la tabla (el array de arrays) que finalmente es insertada en la página por el cliente/navegador.</p>
-                    <p>Aisle el cálculo de la tabla en un modulo Node.js</p>
-                    <p>El volcado de la salida en el cliente debe hacerse usando underscore evitando concatenación de cadenas</p>
-                    <p>Utilice tantas características de ECMA6 como le sea posible</p>
-                    <p>Añada botones/enlaces/menu de selección que permitan cargar un fichero específico de una lista de ficheros en la texarea de entrada como en el ejemplo en crguezl/expressloadfileontotextarea</p>
-                    <p>Añada una zona de Drag-and-Drop a la que se pueda arrastrar el fichero a analizar. Véa el ejemplo draganddrop.html en la sección Ficheros</p>
-                    <p>Añada un botón de lectura de fichero <input type="file" /> para cargar la entrada desde fichero</p>
+                    <p>A los requisitos de la práctica CSV usando Ajax anterior, le añadimos</p>
+                    <p>Un botón guardar. Cuando se hace click en dicho botón se guarda la entrada actual en una base de datos MongoDB.</p>
+                    <p>El contenidode la entrada actual se guarda con un nombre que se solicita previamente al usuario</p>
+                    <p>Usaremos Mongoose para acceder a la base de datos</p>
+                    <p>Sólo se guardan hasta un límite de cuatro ejemplos en la Base de Datos. Cuando el número excede del límite se borra uno de los anteriores y se guarda la nueva entrada</p>
+                    <p>Al igual que en la práctica CSV usando Ajax habrán botones de selección de ejemplo.</p>
+                    <p>Pondremos tantos botones como registros hay en la Base de Datos.</p>
+                    <p>Al hacer click en uno de estos botones se carga el ejemplo con ese nombre desde la base de datos en la textarea de entrada</p>
+                    <p>Para trabajar las rutas que sirven los ejemplos cuando se pulsa uno de los botones de selección de ejemplo se puede usar algo como esto:</p>
                   </div>
                 </div>
             </div>

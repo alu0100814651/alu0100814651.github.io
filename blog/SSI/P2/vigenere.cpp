@@ -12,8 +12,8 @@ clave_(clave_a_cifrar)
 
 vigenere::~vigenere ()
 {
-	mensaje_.clear();
-	clave_.clear();
+    mensaje_.clear();
+    clave_.clear();
 }
 
 void vigenere::corrector ()
@@ -67,7 +67,7 @@ string vigenere::cifrar ()
 {
     int j, caracter = 0, postexto, posclave;
     string mensaje_cifrado;
-    string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+    string alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ*_?¿"; 
     for (int i = 0; i < mensaje_.length(); i++) {
         if (j >= clave_.length()) {
             j = 0;
@@ -76,9 +76,12 @@ string vigenere::cifrar ()
             if (mensaje_[i] == '-') {
                j--;
             }
+            if (clave_[j] == '-') {
+                j++;
+            }
             postexto = alfabeto.find(mensaje_[i]);
             posclave = alfabeto.find(clave_[j]);
-            caracter = alfabeto[(postexto + posclave)%26];
+            caracter = alfabeto[(postexto + posclave)%30];
             if (mensaje_[i] == '-') {
                 caracter = mensaje_[i];
             }
@@ -105,9 +108,12 @@ string vigenere::descifrar ()
             if (mensaje_[i] == '-') {
                 j--;
             }
+            if (clave_[j] == '-') {
+                j++;
+            }
             caracter = mensaje_[i] - clave_[j];
             if (caracter < 0) {
-                caracter = caracter + 26;
+                caracter = caracter + 30;
             }
             caracter = caracter + 65;
             if (mensaje_[i] == '-') {
@@ -115,35 +121,14 @@ string vigenere::descifrar ()
             }
         }
         else {
-            caracter = mensaje_[i];
+            caracter = 26 - clave_[j];
+            if (caracter < 0) {
+                caracter = caracter + 30;
+            }
+            caracter = caracter + 100;
         }
         j++;
         mensaje_descifrado.append(string(1, (char)(caracter)));
     }
     return mensaje_descifrado;
 }
-
-/*
-//Modificación de la práctica
-string vigenere::cesar (void){
-	string clave_cesar, mensaje_nuevo;
-	int j=0;
-	for (int i = 0; i < mensaje_.length(); i++) {
-	    if (mensaje_[i] != '-') {
-	        mensaje_nuevo.append(string(1,mensaje_[i]));
-	    }
-	    else {
-	        mensaje_nuevo.append(string(1,mensaje_[i+1]));
-	        i++;
-	    }
-	}
-	for (int i=0; i<clave_.length();i++){
-		for (int j=0; j<mensaje_nuevo.length();j+=clave_.length()){
-			clave_cesar.append(string(1,mensaje_nuevo[i+j]));
-		}
-		clave_cesar.append(string(1,'\n'));
-	}
-	clave_cesar.erase(clave_cesar.length()-1);
-	return clave_cesar;
-}
-*/

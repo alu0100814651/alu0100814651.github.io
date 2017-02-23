@@ -25,3 +25,4 @@ class vigenere
         
         string cifrar ();
         string descifrar ();
+}

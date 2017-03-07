@@ -3,18 +3,26 @@
 
 using namespace std;
 
-class rc4{
-private:
-	std::vector<unsigned char> S_;
-	std::vector<unsigned char> K_;
-	std::vector<unsigned char> secuencia_;
-	int i_,j_,k_;
-	unsigned t_;
-public:
-	rc4(void);
-	rc4(std::vector<unsigned char> semilla);
-	~rc4 (void);
-	unsigned char prga(void);
-	std::vector<unsigned char> cifrar (std::vector<unsigned char> mensaje);
-	std::vector<unsigned char> secuencia (void);
+class rc4 {
+
+	private:
+		vector<unsigned char> S_;
+		vector<unsigned char> K_;
+		vector<unsigned char> secuencia_;
+		int i_,j_,k_;
+		unsigned z_;
+
+	public:
+		rc4 ();
+		rc4(vector<unsigned char> semilla);
+		~rc4 ();
+		unsigned char prga ();
+		vector<unsigned char> cifrar (vector<unsigned char> mensaje);
+		vector<unsigned char> secuencia ();
+		void imprimir ();
+		
+		vector<unsigned char> cifrar_spritz (vector<unsigned char> mensaje);
+		unsigned char prga_spritz ();
+
 };
+

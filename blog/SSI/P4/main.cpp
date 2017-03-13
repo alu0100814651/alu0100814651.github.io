@@ -14,27 +14,20 @@ int main (void) {
 	vector<unsigned int> datos_v_2 = {21, 22, 11};
 	vector<unsigned int> datos_v_3 = {8, 21, 22, 23, 11};
 
-	a5 A(vector_1, datos_v_1, vector_2, datos_v_2, vector_3, datos_v_3);
+	a5 A (vector_1, datos_v_1, vector_2, datos_v_2, vector_3, datos_v_3);
+	
+	int opt = 0;
 
 	cout << "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INICIO~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+	cout << "\tCuántas iteraciones desea realizar?" << endl;
+	cout << "\t\t";
+	cin  >> opt;
 	A.imprimir_datos();
-	A.generar();
-	A.imprimir_datos ();
-	getchar();
-	A.generar();
-	A.imprimir_datos ();
-	getchar();
-	A.generar();
-	A.imprimir_datos ();
-	getchar();
-	A.generar();
-	A.imprimir_datos ();
-	getchar();
-	A.generar();
-	A.imprimir_datos ();
-	getchar();
-	A.generar();
-	A.imprimir_datos ();
+	for (int i = 0; i < opt; i++) {
+	    A.generar();
+    	A.imprimir_datos ();
+    	getchar();
+	}
 	cout << "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FIN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 
 }

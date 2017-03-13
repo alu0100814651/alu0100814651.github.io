@@ -139,7 +139,7 @@ void a5::imprimir_datos () {
 	cout << "\t-----------------------------LFSR's----------------------------" << endl;
 	cout << "\tEl vector 1 es: ";
 	for (int i = 0; i < v1_.size(); i++) {
-	    if (i == 9) {
+	    if (i == 8) {
 	        cout << "\"" << v1_[i] << "\" ";
 	    }
 	    else {
@@ -148,7 +148,7 @@ void a5::imprimir_datos () {
 	}
 	cout << endl << "\tEl vector 2 es: ";
 	for (int i = 0; i < v2_.size(); i++) {
-		if (i == 11) {
+		if (i == 10) {
 	        cout << "\"" << v2_[i] << "\" ";
 	    }
 	    else {
@@ -157,7 +157,7 @@ void a5::imprimir_datos () {
 	}
 	cout << endl << "\tEl vector 3 es: ";
 	for (int i = 0; i < v3_.size(); i++) {
-		if (i == 11) {
+		if (i == 10) {
 	        cout << "\"" << v3_[i] << "\" ";
 	    }
 	    else {

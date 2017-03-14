@@ -20,5 +20,7 @@ class a5 {
     	unsigned int calculo ();
     	bool generar ();
     	void imprimir_datos ();
+    	a5 (vector<bool> vector1,vector<unsigned int> datos_vector1, vector<bool> vector2,vector<unsigned int> datos_vector2, vector<bool> vector3, vector<unsigned int> datos_vector3, unsigned int mod);
+	    bool generar_mod(unsigned int registro);
 
 };

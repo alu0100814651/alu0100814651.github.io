@@ -22,12 +22,27 @@ int main (void) {
 	cout << "\tCuántas iteraciones desea realizar?" << endl;
 	cout << "\t\t";
 	cin  >> opt;
+	for (int i = 0; i < 10; i++) {
+		A.generar ();
+		A.imprimir_datos ();
+	}
+	cout << endl << "Semilla inicial:" << endl;
 	A.imprimir_datos();
 	for (int i = 0; i < opt; i++) {
+		cout << endl << "Iteración: " << i+1;
 	    A.generar();
     	A.imprimir_datos ();
     	getchar();
 	}
 	cout << "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FIN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+	
+	//MODIFICACION PRACTICA
+	vector<bool> vector_1_mod = {1,0,0,0,1,0,1,1,0,0,0,1,0,0,0,1,0,0,1};
+	vector<bool> vector_2_mod = {0,1,0,1,1,0,0,1,0,0,0,1,1,1,1,0,0,1,1,0,1,0};
+	vector<bool> vector_3_mod = {1,1,1,1,0,0,0,0,1,1,1,1,0,1,1,0,0,1,1,1,1,0,1};
+	vector<unsigned int> datos_vector_1_mod = {14,17,18,19,9};
+	vector<unsigned int> datos_vector_2_mod = {21,22,11};
+	vector<unsigned int> datos_vector_3_mod = {8,21,22,23,11};
+	a5 B(vector_1_mod, datos_vector_1_mod, vector_2_mod, datos_vector_2_mod, vector_3_mod, datos_vector_3_mod,0);
 
 }

@@ -17,6 +17,49 @@ datos_v2_(datos_v2),
 datos_v3_(datos_v3)
 {}
 
+a5::a5 (vector<bool> vector1,vector<unsigned int> datos_vector1, vector<bool> vector2,vector<unsigned int> datos_vector2, vector<bool> vector3, vector<unsigned int> datos_vector3, unsigned int mod):
+v1_(vector1.size(),0),
+v2_(vector2.size(),0),
+v3_(vector3.size(),0),
+datos_v1_(datos_vector1),
+datos_v2_(datos_vector2),
+datos_v3_(datos_vector3)
+{
+	bool copia;
+	vector<bool> vector_64_bits={0,1,0,0, 1,1,1,0, 0,0,1,0, 1,1,1,1, 0,1,0,0, 1,1,0,1, 0,1,1,1, 1,1,0,0, 0,0,0,1, 1,1,1,0, 1,0,1,1, 1,0,0,0, 1,0,0,0, 1,0,1,1, 0,0,1,1, 1,0,1,0};
+	//vector_64_bits.insert(vector_64_bits.begin(), vector1.begin(),vector1.end());
+	//vector_64_bits.insert(vector_64_bits.end(), vector2.begin(),vector2.end());
+	//vector_64_bits.insert(vector_64_bits.end(), vector3.begin(),vector3.end());
+
+	for (int i=0;i<vector_64_bits.size();i++){
+		copia = generar_mod(1);
+		v1_.erase(v1_.end());
+		v1_.insert(v1_.begin(),copia^vector_64_bits[i]);
+	}
+	for (int i=0;i<vector_64_bits.size();i++){
+		copia = generar_mod(2);
+		v2_.erase(v2_.end());
+		v2_.insert(v2_.begin(),copia^vector_64_bits[i]);
+	}
+	for (int i=0;i<vector_64_bits.size();i++){
+		copia = generar_mod(3);
+		v3_.erase(v3_.end());
+		v3_.insert(v3_.begin(),copia^vector_64_bits[i]);
+	}
+	cout << endl << "====================MODIFICACION====================" << endl;
+	cout << "El primer vector inicializado da: ";
+	for (int i=0; i<v1_.size();i++)
+		cout << " " << v1_[i];
+	cout << endl << "El segundo vector inicializado da: ";
+	for (int i=0; i<v2_.size();i++)
+		cout << " " << v2_[i];
+	cout << endl << "El tercer vector inicializado da: ";
+	for (int i=0; i<v3_.size();i++)
+		cout << " " << v3_[i];
+	cout << endl;
+}
+
+
 a5::~a5() {
 
 }
@@ -39,17 +82,17 @@ unsigned int a5::calculo () {
 
 bool a5::generar () {
 	unsigned int registro_mover = calculo ();
-	bool aux, aux1, aux2, aux3;
+	bool secuencia_cifrante, aux1, aux2, aux3;
 
 	if (registro_mover != 123 && registro_mover != 12 && registro_mover != 23 && registro_mover != 13)
 		cout << "\tREGISTRO ERRONEO!" << endl;
 	else {
-		aux = v1_.back() ^ v2_.back() ^ v3_.back();
+		secuencia_cifrante = v1_.back() ^ v2_.back() ^ v3_.back();
 		aux1 = v1_[datos_v1_[0]-1];
 		aux2 = v2_[datos_v2_[0]-1];
 		aux3 = v3_[datos_v3_[0]-1];
 		cout << endl << "\t===============================================================" << endl;
-		cout << "\t" << v1_.back() << " ^ " << v2_.back() << " ^ " << v3_.back() << " = " << aux << endl;
+		cout << "\t" << v1_.back() << " ^ " << v2_.back() << " ^ " << v3_.back() << " = " << secuencia_cifrante << endl;
 
 	}
 	if (registro_mover == 123) {
@@ -72,7 +115,7 @@ bool a5::generar () {
 		v2_.insert(v2_.begin(), aux2);
 		v3_.erase(v3_.end());
 		v3_.insert(v3_.begin(), aux3);
-		cout << "\tSe mueven todos los registros." << endl;
+		cout << "\tTodos los registros se mueven" << endl;
 		cout << "\tEn el registro 1 insertamos: " << aux1 << endl;
 		cout << "\tEn el registro 2 insertamos: " << aux2 << endl;
 		cout << "\tEn el registro 3 insertamos: " << aux3 << endl;
@@ -91,7 +134,7 @@ bool a5::generar () {
 		v1_.insert(v1_.begin(), aux1);
 		v2_.erase(v2_.end());
 		v2_.insert(v2_.begin(), aux2);
-		cout << "\tSe mueven los registros 1 y 2." << endl;
+		cout << "\tEl registro 3 queda paralizado" << endl;
 		cout << "\tEn el registro 1 insertamos: " << aux1 << endl;
 		cout << "\tEn el registro 2 insertamos: " << aux2 << endl;
 	}
@@ -109,7 +152,7 @@ bool a5::generar () {
 		v1_.insert(v1_.begin(), aux1);
 		v3_.erase(v3_.end());
 		v3_.insert(v3_.begin(), aux3);
-		cout << "\tSe mueven los registros 1 y 3." << endl;
+		cout << "\tEl registro 2 queda paralizado" << endl;
 		cout << "\tEn el registro 1 insertamos: " << aux1 << endl;
 		cout << "\tEn el registro 3 insertamos: " << aux3 << endl;
 	}
@@ -127,12 +170,12 @@ bool a5::generar () {
 		v2_.insert(v2_.begin(), aux2);
 		v3_.erase(v3_.end());
 		v3_.insert(v3_.begin(), aux3);
-		cout << "\tSe mueven los registros 2 y 3." << endl;
+		cout << "\tEl registro 1 queda paralizado" << endl;
 		cout << "\tEn el registro 2 insertamos: " << aux2 << endl;
 		cout << "\tEn el registro 3 insertamos: " << aux3 << endl;
 	}
 	
-	return aux;
+	return secuencia_cifrante;
 }
 
 void a5::imprimir_datos () {
@@ -143,7 +186,7 @@ void a5::imprimir_datos () {
 	        cout << "\"" << v1_[i] << "\" ";
 	    }
 	    else {
-		cout << v1_[i] << " ";
+		cout << v1_[i] << "  ";
 	    }
 	}
 	cout << endl << "\tEl vector 2 es: ";
@@ -152,7 +195,7 @@ void a5::imprimir_datos () {
 	        cout << "\"" << v2_[i] << "\" ";
 	    }
 	    else {
-		cout << v2_[i] << " ";
+		cout << v2_[i] << "  ";
 	    }
 	}
 	cout << endl << "\tEl vector 3 es: ";
@@ -161,8 +204,37 @@ void a5::imprimir_datos () {
 	        cout << "\"" << v3_[i] << "\" ";
 	    }
 	    else {
-		cout << v3_[i] << " ";
+		cout << v3_[i] << "  ";
 	    }
 	}
 	cout << endl;
+}
+
+//MODIFICACION
+
+bool a5::generar_mod(unsigned int registro){ //calculo ()
+
+	bool meter_1, meter_2, meter_3, devolver;
+
+	if (registro == 1){
+		meter_1 = v1_[datos_v1_[0]-1];
+		for (int i=1; i<datos_v1_.size()-1;i++)
+			meter_1 = meter_1 ^ v1_[datos_v1_[i]-1];
+		return meter_1;
+	}
+	else if (registro == 2){
+		meter_2 = v2_[datos_v2_[0]-1];
+		for (int i=1; i<datos_v2_.size()-1;i++)
+			meter_2 = meter_2 ^ v2_[datos_v2_[i]-1];
+		return meter_2;
+	}
+	else if (registro == 3){
+		meter_3 = v3_[datos_v3_[0]-1];
+		for (int i=1; i<datos_v3_.size()-1;i++)
+			meter_3 = meter_3 ^ v3_[datos_v3_[i]-1];
+		return meter_3;
+	}
+	else{
+		cout << "HAY UN ERROR EN LOS REGISTROS!!!" << endl;
+	}
 }

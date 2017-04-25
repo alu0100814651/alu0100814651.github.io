@@ -20,4 +20,7 @@ class DH
 		
 		unsigned get_y (void);
 		unsigned get_secreto (void);
+
+		void set(unsigned pr_, unsigned al_, unsigned sec_);
+		void set_y(unsigned y);
 };

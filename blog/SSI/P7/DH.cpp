@@ -20,10 +20,10 @@ y_ (0)
 			y_ = exp_rapida (alfa_, sec_);
 		}
 		else
-			cout << "P no es primo" << endl;
+			cout << "P debe ser primo" << endl;
 	}
 	else
-		cout << "α no es menor que P" << endl;
+		cout << "α debe ser menor que P" << endl;
 }
 
 DH::~DH (void)
@@ -33,7 +33,7 @@ bool DH::es_primo (unsigned pr_)
 {
 	unsigned a = 0;
 
-	for(unsigned i = 1; i < (pr_+1); i++)
+	for(unsigned i = 1; i < (pr_ + 1); i++)
 	{
 		if(pr_ % i == 0)
 			a++;
@@ -67,6 +67,30 @@ unsigned DH::exp_rapida (unsigned base, unsigned exp_)
 	return x;
 }
 
+void DH::set (unsigned pr_, unsigned al_, unsigned sec_)
+{
+	secreto_ = sec_;
+	y_ = 0;
+
+	if (al_ < pr_)
+	{
+		alfa_ = al_;
+		if (es_primo (pr_))
+		{
+			primo_ = pr_;
+			y_ = exp_rapida (alfa_, sec_);
+		}
+		else
+		{
+			cout << "P debe ser primo" << endl;
+		}
+	}
+	else
+	{
+		cout << "α debe ser menor que P" << endl;
+	}
+}
+
 unsigned DH::get_y (void)
 {
 	return y_;
@@ -76,3 +100,10 @@ unsigned DH::get_secreto (void)
 {
 	return secreto_;
 }
+
+void DH::set_y (unsigned y)
+{
+	y_ = exp_rapida (y, secreto_);
+}
+
+

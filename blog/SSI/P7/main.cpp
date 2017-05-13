@@ -1,91 +1,57 @@
-#include "DH.hpp"
+//Pasos a seguir:
+//		--> sudo apt install libboost-all-dev
+//		--> sudo apt install libgmp3-dev
+//		--> g++ -std=c++11 main.cpp FS.cpp -lgmp
+
+#include "FS.hpp"
 
 using namespace std;
 
-int main (void){
-	int opt = 1;
-	int usu = 1;
-	while (opt != 0)
+int main (void)
+{
+	system ("clear");
+	
+	boost::multiprecision::mpz_int p_a, q_a, d_a, s_a, p_b, q_b, d_b, x_a, x_b, e_a, e_b;
+	unsigned iter;
+
+    cout << endl << "\t\t\t==============================================";
+	cout << endl << "\t\t\t-----------------DIFFIE-HELLMAN---------------";
+    cout << endl << "\t\t\t==============================================";
+    cout << endl << endl;
+	cout << "p = ";
+	cin >> p_a;
+	cout << "q = ";
+	cin >> q_a;
+	cout << "s = ";
+	cin >> s_a;
+	cout << "i (número de iteraciones) = ";
+	cin >> iter;
+	cout << endl << "B utilizará los mismo valores que A." << endl << endl;
+	FS A (p_a, q_a, s_a);
+	FS B (p_a, q_a, s_a);
+	cout << "La N de A es: " << A.get_n () << endl;
+	cout << "La v de A es: " << A.get_v () << endl << endl;
+
+	for (int i = 0; i < iter; i++)
 	{
-		system("clear");
-		cout << "¿Desean conectarse 2 usuarios (1) o más (2)?" << endl;
-		cin >> usu;
-		if (usu == 1) {
-			unsigned primo = 0;
-			unsigned alfa = 0;
-			unsigned secreto_a = 0;
-			unsigned secreto_b = 0;
-			cout << "Introduzca el p a utilizar:" << endl;
-			cin >> primo;
-			
-			cout << "Introduzca el α a utilizar:" << endl;
-			cin >> alfa;
-			
-			cout << "El secreto del usuario A es:" << endl;
-			cin >> secreto_a;
-			
-			cout << "El secreto del usuario B es:" << endl;
-			cin >> secreto_b;
-			
-			DH A (primo, alfa, secreto_a);
-			DH B (primo, alfa, secreto_b);
+		cout << i + 1 << "ª iteracción: " << endl;
+		cout << "x = ";
+		cin >> x_a;
+		A.set_x (x_a);
+		cout << "e = ";
+		cin >> e_b;
+		cout << "\t===> a de A es: " << A.get_a () << endl;
+		cout << "\t===> y de A es: " << A.get_y (e_b) << endl;
+		cout << "\tVerificación de B en proceso..." << endl;
 		
-		    cout << endl << "\t\t\t==============================================";
-			cout << endl << "\t\t\t-----------------DIFFIE-HELLMAN---------------";
-		    cout << endl << "\t\t\t==============================================";
-		    cout << endl;
-			cout << "p = " << primo << "     ";
-			cout << "α = " << alfa << "     ";
-			cout << "xA = " << A.get_secreto () << "     ";
-			cout << "xB = " << B.get_secreto () << "     " << endl;
-			cout << "(" << alfa << " ^ " << A.get_secreto () << " ) mod " << primo << " = " << A.get_y () << "     ";
-			cout << "(" << alfa << " ^ " << B.get_secreto () << " ) mod " << primo << " = " << B.get_y () << "     " << endl;
-			cout << "----------------------------------------------------------------------------------------------" << endl;
-			cout << "(" << B.get_y () << " ^ " << A.get_secreto () << " ) mod " << primo << " = " << A.exp_rapida (B.get_y (), A.get_secreto ()) << "     ";
-			cout << "(" << A.get_y () << " ^ " << B.get_secreto () << " ) mod " << primo << " = " << B.exp_rapida (A.get_y (), B.get_secreto ()) << "     " << endl;
-			
+		if (B.verificacion (A.get_y (e_b), A.get_a (), A.get_v (), A.get_n (), e_b))
+		{
+			cout << "\tLa verificación por parte de B es válida" << endl;
 		}
-
-		else {
-			unsigned pers;
-			unsigned primo_2;
-			unsigned alfa_2;
-			cout << "Introduzca la cantidad de personas a comunicar:" << endl;
-			cin >> pers;
-			cout << "Introduzca el p a utilizar:" << endl;
-			cin >> primo_2;
-			cout << "Introduzca el α a utilizar:" << endl;
-			cin >> alfa_2;
-
-			unsigned secreto_2[pers];
-			DH Personas_[pers];
-
-			for (int i = 0; i < pers; i++)
-			{
-				cout << "El secreto del usuario " << i+1 << " es: ";
-				cin >> secreto_2[i];
-				Personas_[i].set (primo_2, alfa_2, secreto_2[i]);
-				cout << endl << "=====> " << Personas_[i].get_y () << endl;
-			}
-			cout << "=====" << endl;
-
-			unsigned aux;
-
-			for (int i = 0; i < pers; i++)
-			{
-				aux = Personas_[i + 1].exp_rapida (Personas_[i].get_y (), secreto_2[i + 1]);
-			
-				cout << Personas_[i].get_y () << endl;
-			
-				Personas_[i].set_y (aux);
-			
-				cout << "====> " << Personas_[i].get_y () << endl;
-			}
-
-			cout << "K: " << Personas_[pers - 1].exp_rapida (Personas_[pers - 2].get_y (), secreto_2[pers - 1]) << endl;
+		else
+		{
+			cout << "\tLa información recibida para B no es válida" << endl;
 		}
-
-		cout << endl << "Quiere realizar otra consulta? SI(1) NO(0)" << endl;
-		cin >> opt;
+		cout << endl;
 	}
 }

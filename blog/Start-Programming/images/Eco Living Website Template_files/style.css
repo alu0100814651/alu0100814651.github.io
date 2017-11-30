@@ -1,0 +1,239 @@
+/* Website template by freewebsitetemplates.com */
+/*------------------------- Fonts ------------------------*/
+@font-face {
+	font-family: 'anticregular';
+	src: url('../fonts/antic-regular-webfont.eot');
+	src: url('../fonts/antic-regular-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/antic-regular-webfont.woff') format('woff'),  url('../fonts/antic-regular-webfont.ttf') format('truetype'),  url('../fonts/antic-regular-webfont.svg#anticregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*------------------------- Layout styles ------------------------*/
+body {
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	background: white;
+	font-size:12px;
+	background-color: #DCDCDC;
+	width: 100%;
+	height: 100%;
+}
+a {
+	outline:none;
+}
+a img {
+	border:0;
+	display:block;
+}
+p {
+	font-size:12px;
+	line-height:24px;
+	letter-spacing:0.05em;
+	color:#959595;
+}
+p a {
+	color:#959595;
+}
+p a:hover {
+	color:#1bb5ac;
+}
+/*------------------------- Header ------------------------*/
+header {
+	position: fixed;
+	width: 100%;
+    font-family: raleway;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #123456;
+}
+
+.navbar a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: blue;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*------------------------- Body ------------------------*/
+#id-grey {
+	color: grey;
+}
+
+#id-grey:hover {
+	font-size: 20px;
+	color: blue;
+}
+#index-body {
+	background-color: white;
+}
+#body {
+	margin:0 auto 97px;
+	min-height:1005px;
+	padding:38px 29px 0;
+	width:902px;
+}
+#body.home .blog {
+	overflow:hidden;
+}
+#body.home .blog > img {
+	display:block;
+	float:left;
+	margin:45px 0 0;
+}
+#body.home .blog div {
+	float:right;
+	padding:5px 0 0;
+	width:430px;
+}
+#body.home .blog div img {
+	display:block;
+	margin:0 0 0 28px;
+}
+#body.home .blog div h1 {
+	color:#e49e06;
+	font-family:anticregular;
+	font-size:20px;
+	font-weight:400;
+	letter-spacing:.1em;
+	line-height:24px;
+	margin-bottom:3px;
+	text-align:right;
+	text-indent:110px;
+}
+#body.home .blog div p {
+	margin:0;
+	text-align:right;
+}
+#body.home .article {
+	margin:63px 0 0;
+	overflow:hidden;
+}
+#body.home .article div {
+	float:left;
+	padding:0 0 0 25px;
+	width:465px;
+}
+#body.home .article div h1 {
+	color:#e49e06;
+	font-family:anticregular;
+	font-size:20px;
+	font-weight:400;
+	letter-spacing:.1em;
+	line-height:24px;
+	margin:6px 0 3px;
+	text-align:left;
+}
+#body.home .article div p {
+	margin:0 0 24px;
+	text-align:left;
+}
+#body.home .article > img {
+	display:block;
+	float:right;
+	margin:0 44px 0 0;
+}
+#body.home .news {
+	overflow:hidden;
+	padding:37px 0 0;
+}
+#body.home .news > img {
+	display:block;
+	float:left;
+	margin:0 0 0 80px;
+}
+#body.home .news div {
+	float:right;
+	padding:25px 0 0;
+	width:430px;
+}
+#body.home .news div h1 {
+	color:#e49e06;
+	font-family:anticregular;
+	font-size:20px;
+	font-weight:400;
+	letter-spacing:.1em;
+	line-height:24px;
+	margin:6px 0 3px;
+	text-align:right;
+}
+#body.home .news div p {
+	margin:0 0 24px;
+	text-align:right;
+}
+#html-img {
+	width: inherit;
+	height: inherit;
+}
+#html-body-div {
+	background-color: #FF5733;
+}
+#html-h1 {
+	color:white;
+	font-size: 50px;
+}
+#html-p {
+	color: white;
+	font-size: 20px;
+}
+/*------------------------- Footer ------------------------*/
+footer {
+	background:url(../images/bg-footer.png) repeat-x;
+	height:50px;
+}
+footer div {
+	 color: black;
+	 margin-left: 2%;
+}
+footer div b {
+	font-size: 20px;
+}
+footer div div {
+	float: right;
+	margin-right: 2%;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>START PROGRAMMING</title>
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<header>
+		<div>
+			<div class="navbar">
+				<a href="contact.html">Contact</a>
+			    <div class="dropdown">
+			    	<button class="dropbtn">Subdivisions</button>
+			    	<div class="dropdown-content">
+			      		<a href="html.html">HTML</a>
+			      		<a href="css.html">CSS</a>
+			      		<a href="js.html">JavaScript</a>
+			    	</div>
+			  	</div>
+				<a href="index.html">Home</a>
+			</div>
+		</div>
+	</header>
+	<div id="body" class="home">
+		<div align="center">
+			<img src="images/css.png" id="html-img">
+		</div>
+		<h1 style="font-size: 50px; color: brown;" align="center">
+			¿CÓMO USAR CSS?
+		</h1>
+		<h1 align="center">
+			Hay 3 opciones para usar estilos en una página web.
+		</h1>
+		<div id="html-etiquetas-div" align="center">
+			<a href="#ext">CSS Externo</a>
+			<a href="#int">CSS Interno</a>
+			<a href="#emb">CSS Embebido</a>
+		</div>
+		<br>
+		<div id="css-div-dl" align="left">
+			<div id="ext"></div>
+			<br>
+			<div id="css-nav">
+			<hr>
+				CSS Externo
+				<p id="html-p">En la cabecera del HTML, el bloque &lt;head&gt;<i style="font-size: 10px;">code</i>&lt;/head&gt;, incluimos una relación al archivo CSS en cuestión:</p>
+				<div align="center" id="html-div" style="font-size: 0.9em;">
+				<i>&lt;link rel="stylesheet" type="text/css" href="index.css" /&gt;</i>
+				</div>
+				<p id="html-p">De esta forma, los navegadores sabrán que deben aplicar los estilos de este archivo (<em>index.css</em>) al documento HTML actual. Se aconseja escribir esta línea lo antes posible (<em>sobre todo, antes de scripts</em>), obligando así al navegador a aplicar los estilos cuanto antes y eliminar la falsa sensación de página no cargada por completo.</p>
+				<p id="html-p">Esta es la manera recomendada de utilizar un archivo CSS en nuestros documento y la que utilizaremos principalmente.</p>
+			</div>
+			<br>
+			<blockquote>
+				<div id="css-blockquote-1">
+					<br>
+					<p>También es posible incluir archivos CSS mediante la <strong>regla @import</strong> (<em>las cuales deberían ir al principio del documento</em>), pero esta regla sólo es recomendable en ciertas situaciones puesto que su utilización afecta al rendimiento de carga de la página, así que nos centraremos sólo en la anterior.</p>
+					<br>
+				</div>
+			</blockquote>
+			<div id="int"></div>
+			<br>
+			<div id="css-nav">
+			<hr>	
+				CSS Interno
+				<p id="html-p">Otra de las formas que existen para incluir estilos en un documento HTML es la de añadirlos directamente en la cabecera HTML del documento:</p>
+				<div align="center" id="html-div" style="font-size: 0.9em;">
+				<pre>&lt;!DOCTYPE html&gt;                    <br>&lt;html&gt;                             <br>&lt;head&gt;                             <br>&lt;title&gt;Título de la página&lt;/title&gt;<br>&lt;style type="text/css"&gt;<br>div {<br>                 background:#FFFFFF;<br>}    <br>&lt;/style&gt;              <br>&lt;/head&gt;                          <br>...                              
+</pre>
+				</div>
+			</div>
+			<div id="emb"></div>
+			<br>
+			<div id="css-nav">
+			<hr>
+				CSS Embebido
+				<p id="html-p">Por último, la tercera forma de aplicar estilos en un documento HTML es hacerlo directamente en las propias etiquetas, a través del atributo <b>style</b>:</p>
+				<div align="center" id="html-div" style="font-size: 0.9em;">
+				<i>&lt;p&gt;¡Hola &lt;span style="color:#FF0000"&gt;amigo lector&lt;/span&gt;!&lt;/p&gt;</i>
+				</div>
+				<p id="html-p">Al igual que en el método anterior, se recomienda no utilizarse salvo casos muy específicos, ya que se pierde la independencia de la presentación y contenido. Sin embargo, es una opción que puede venir bien en algunos casos.</p>
+				<br>
+			</div>
+			<br>
+			<blockquote>
+				<div id="css-blockquote-2">
+					<br>
+					<p><b>Consejo</b>: Si quieres comenzar a hacer pruebas con propiedades básicas de CSS, puedes utilizar <a href="http://codepen.io/pen">CodePen</a>, una plataforma web que te permite crear contenido HTML5, CSS3 y Javascript, previsualizando al vuelo el documento final, sin necesidad de recargar el documento.</p>
+					<br>
+				</div>
+			</blockquote>
+		</div>
+		<br>
+		<br>
+		<div align="center">
+			<a id="html-button" href="css.html">Introducción a CSS <i class="fa fa-hand-o-left"></i></a>
+			&emsp;&emsp;&emsp;
+			<a id="html-button" href="js.html"><i class="fa fa-hand-o-right"></i> JavaScript</a>
+		</div>
+	</div>
+	<footer>
+		<div>
+			&#169; 2017 Nitesh Gul Ramnani from <b>"START PROGRAMMING"</b>. ALL Rights Reserved.
+			<div>
+				<a href="https://www.instagram.com/nitzramnani/"><i class="fa fa-instagram fa-4x fa-spin"></i></a>&emsp;
+				<a href="https://www.facebook.com/NiTz.CoOl.RaMnAnI"><i class="fa fa-facebook-square fa-4x fa-spin"></i></a>&emsp;
+				<a href="https://plus.google.com/u/0/109409789364472151605"><i class="fa fa-google-plus-square fa-4x fa-spin"></i></a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

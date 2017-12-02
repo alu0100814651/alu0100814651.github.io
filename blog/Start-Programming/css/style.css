@@ -104,14 +104,6 @@ header {
     display: block;
 }
 /*------------------------- Body ------------------------*/
-#id-grey {
-	color: grey;
-}
-
-#id-grey:hover {
-	font-size: 20px;
-	color: blue;
-}
 #body {
 	margin:0 auto 97px;
 	min-height:1005px;
@@ -206,6 +198,15 @@ header {
 	margin:0 0 24px;
 	text-align:right;
 }
+/*------------------------- Personalized ------------------------*/
+#id-grey {
+	color: grey;
+}
+
+#id-grey:hover {
+	font-size: 20px;
+	color: blue;
+}
 #html-img {
 	width: inherit;
 	height: inherit;
@@ -261,11 +262,19 @@ header {
 #css-dl dd:hover {
 	font-variant: small-caps;
 }
-#body div a {
+#css-nav {
+	font-size: 2em;
+	font-weight: bold;
+	background-color: #0c72ba;
+}
+#css-nav p {
+	font-weight: normal;
+}
+#html-etiquetas-div a {
 	color: green;
 	margin-left: 1%;
 }
-#body div a:hover {
+#html-etiquetas-div a:hover {
 	border-style: inset;
 	border-color: red;
 	font-size: 1.5em;
@@ -275,7 +284,26 @@ header {
 hr {
 	margin-top: 40px;
 }
-/*------------------------- Footer ------------------------*/
+blockquote {
+	border-style: solid;
+	border-color: grey;
+	border-width: 1em;
+	border-left-color: inherit;
+	border-right-color: inherit;
+}
+blockquote p {
+	font-family: Arial;
+	font-size: 12px;
+	color: darkblue;
+	font-weight: bolder;
+}
+#css-blockquote-1 {
+	background-color: lightpink;
+}
+#css-blockquote-2 {
+	background-color: plum;
+}
+/*------------------------- Footer (Personalized) ------------------------*/
 footer {
 	background:url(../images/bg-footer.png) repeat-x;
 	height:50px;

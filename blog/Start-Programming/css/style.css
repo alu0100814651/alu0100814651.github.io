@@ -217,6 +217,9 @@ header {
 #css-body-div {
 	background-color: #0c72ba;
 }
+#js-body-div {
+	background-color: #f58431;
+}
 #html-h1 {
 	color:white;
 	font-size: 50px;
@@ -303,17 +306,34 @@ blockquote p {
 #css-blockquote-2 {
 	background-color: plum;
 }
+#special1 {
+	font-size: small;
+}
+ #hr-index { 
+   border-top: 3px solid #123456;
+   border-bottom: 3px solid #123456;
+   border-left: 3px dotted #123456;
+   border-right: 3px dotted #123456;
+   border-radius: 200px /8px;
+   background-color: #654321;
+   height: 6px;
+   width: 70%;
+ }
 /*------------------------- Footer (Personalized) ------------------------*/
 footer {
 	background:url(../images/bg-footer.png) repeat-x;
-	height:50px;
+	height:70px;
 }
 footer div {
-	 color: black;
-	 margin-left: 2%;
+	color: black;
+	margin-left: 2%;
 }
 footer div b {
 	font-size: 20px;
+}
+footer div img {
+	height: 3%;
+	width: 3%;
 }
 footer div div {
 	float: right;

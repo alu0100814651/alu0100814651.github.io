@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LOG IN - START PROGRAMMING</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="navbar">
+        <div style="margin-right: 90%;">
+          <a href="./index.html">
+            <i class="fa fa-undo fa-2x"></i>
+          </a>
+        </div>
+        <a href="#"></a>
+          <div class="dropdown">
+            <button class="dropbtn"></button>
+            <div class="dropdown-content">
+                <a onclick="openhtml()">HTML</a>
+                <a onclick="opencss()">CSS</a>
+                <a onclick="openjs()">JavaScript</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn"></button>
+            <div class="dropdown-content">
+                <a href="html-etiquetas.html">Etiquetas de HTML</a>
+                <a href="css-como-usar.html">Cómo usar CSS</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </header>
+  <br><br><br><br><br><br>
+  <div align="center">
+    <img src="images/html-css-js.png" id="logo">
+  </div>
+  <br><br>
+  <div align="center">
+    <form name="form1" align="center">
+      <input type="text" name="email" placeholder="E-mail" required><br>
+      <p id="one1">----------------</p>
+      <input type="password" name="password" placeholder="Password" required pattern=".{100,}"><br><br>
+        <!-- Si queremos que el password tenga un estilo en concreto, ponemos: pattern=".{6,}"-->
+      <input type="submit" value="Sign In" onclick="usrpas(document.form1.email)">
+    </form><br>
+  </div>
+  <footer>
+    <br>
+    <div>
+      &#169; 2017 Nitesh Gul Ramnani from <b>"START PROGRAMMING"</b>
+      <div>
+        <i onclick="linkedin()" class="fa fa-linkedin-square fa-4x fa-spin"></i>&emsp;
+        <i onclick="instagram()" class="fa fa-instagram fa-4x fa-spin"></i>&emsp;
+        <i onclick="facebook()" class="fa fa-facebook-square fa-4x fa-spin"></i>&emsp;
+        <i onclick="google()" class="fa fa-google-plus-square fa-4x fa-spin"></i>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/functions.js"></script>
+</body>
+</html>

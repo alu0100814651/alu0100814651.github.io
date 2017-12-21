@@ -199,6 +199,11 @@ header {
 	text-align:right;
 }
 /*------------------------- Personalized ------------------------*/
+#logo {
+	width: 40%;
+	height: inherit;
+}
+
 #id-grey {
 	color: grey;
 }
@@ -207,31 +212,39 @@ header {
 	font-size: 20px;
 	color: blue;
 }
+
 #html-img {
 	width: inherit;
 	height: inherit;
 }
+
 #html-body-div {
 	background-color: #FF5733;
 }
+
 #css-body-div {
 	background-color: #0c72ba;
 }
+
 #js-body-div {
 	background-color: #f58431;
 }
+
 #html-h1 {
 	color:white;
 	font-size: 50px;
 }
+
 #html-p {
 	color: white;
 	font-size: 20px;
 }
+
 #html-p-b {
 	background-color: grey;
 	border-style: outset;
 }
+
 #html-div {
 	font-size: 1.7em;
 	border-color: yellow;
@@ -239,6 +252,7 @@ header {
 	background-color: black;
 	color: lightgreen;
 }
+
 #html-button {
 	float: center;
 	font-size: 30px;
@@ -247,6 +261,7 @@ header {
 	background-color: #123456;
 	color: lightgrey;
 }
+
 #html-button:hover {
 	float: center;
 	font-size: 40px;
@@ -255,28 +270,35 @@ header {
 	background-color: #128b1a;
 	color: lightgrey;	
 }
+
 #css-dl {
 	font-size: 2em;
 	margin-left: 20%;
 }
+
 #css-dl dt {
 	font-weight: bold;
 }
+
 #css-dl dd:hover {
 	font-variant: small-caps;
 }
+
 #css-nav {
 	font-size: 2em;
 	font-weight: bold;
 	background-color: #0c72ba;
 }
+
 #css-nav p {
 	font-weight: normal;
 }
+
 #html-etiquetas-div a {
 	color: green;
 	margin-left: 1%;
 }
+
 #html-etiquetas-div a:hover {
 	border-style: inset;
 	border-color: red;
@@ -284,9 +306,11 @@ header {
 	background-color: lightblue;
 	color: grey;
 }
+
 hr {
 	margin-top: 40px;
 }
+
 blockquote {
 	border-style: solid;
 	border-color: grey;
@@ -294,31 +318,65 @@ blockquote {
 	border-left-color: inherit;
 	border-right-color: inherit;
 }
+
 blockquote p {
 	font-family: Arial;
 	font-size: 12px;
 	color: darkblue;
 	font-weight: bolder;
 }
+
 #css-blockquote-1 {
 	background-color: lightpink;
 }
+
 #css-blockquote-2 {
 	background-color: plum;
 }
+
 #special1 {
 	font-size: small;
 }
- #hr-index { 
-   border-top: 3px solid #123456;
-   border-bottom: 3px solid #123456;
-   border-left: 3px dotted #123456;
-   border-right: 3px dotted #123456;
-   border-radius: 200px /8px;
-   background-color: #654321;
-   height: 6px;
-   width: 70%;
- }
+
+#hr-index {
+	border-top: 3px solid #123456;
+	border-bottom: 3px solid #123456;
+	border-left: 3px dotted #123456;
+	border-right: 3px dotted #123456;
+	border-radius: 200px /8px;
+	background-color: #654321;
+	height: 6px;
+	width: 70%;
+}
+
+input[type = text] {
+	background-color: transparent;
+	border: none;
+	height: 20px;
+	text-align: center;
+	font-size: 15px;
+}
+
+input[type = password] {
+	background-color: transparent;
+	border: none;
+	height: 20px;
+	text-align: center;
+	font-size: 15px;
+}
+
+input[type = submit] {
+	border-radius: 20%;
+	border: none;
+	height: 50px;
+	width: 175px;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	font-family: raleway;
+	font-weight: normal;
+}
+
 /*------------------------- Footer (Personalized) ------------------------*/
 footer {
 	background:url(../images/bg-footer.png) repeat-x;

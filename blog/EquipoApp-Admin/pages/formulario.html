@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../vendor/bootstrap/css/logo_equipoapp_gris.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EquipoApp - Admin</title>
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><b style="color: #123456;">EquipoApp</b> - Admin</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <br>
+                        <br>
+                        <li>
+                            <a href="main.html"><i class="fa fa-dashboard fa-fw"></i> Panel Principal</a>
+                        </li>
+                        <li>
+                            <a href="calendario.html"><i class="fa fa-table fa-fw"></i> Vista Calendario</a>
+                        </li>
+                        <li>
+                            <a href="secuencias.html"><i class="fa fa-edit fa-fw"></i> Vista Secuencias</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Empresas Externas<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="transporte.html">Transporte</a>
+                                </li>
+                                <li>
+                                    <a href="catering.html">Catering</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="empty.html">Empty Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Empty - Panel Principal</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-table fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size: 2em;">Calendario</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="calendario.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-edit fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size: 1.8em;">Secuencias</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="secuencias.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-taxi fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size: 1.8em;">Transporte</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="transporte.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cutlery fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size: 1.8em;">Catering</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="catering.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-info-circle fa-fw"></i> Detalles de Secuencia
+                        </div>
+                        <div align="center" style="font-size: 20px; font-weight: bolder;">
+                            Aquí van a aparecer todos los detalles de la secuencia seleccionada.
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="agenda">
+                                <h3 align="center">
+                                    <a href="#" id="one">
+                                        <i class="fa fa-arrow-left fa-fw"></i> Ant. Secuencia
+                                    </a>
+                                    <a>Secuencia 19</a>
+                                    <a href="#" id="two">
+                                        Próx. Secuencia <i class="fa fa-arrow-right fa-fw"></i>
+                                    </a>
+                                </h3>
+                                <table style="background-color: #fee;" class="table table-bordered table-definition mb-5">
+                                    <tbody>
+                                        <tr align="center">
+                                            <td><b>PERSONAJES</b></td>
+                                            <td>EVA<br>ANTONIO</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>MAQ/PEL</b></td>
+                                            <td>
+                                                ANA - Tapar tatuaje pierna<br>
+                                                PEPE - Peluca
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>VESTUARIO</b></td>
+                                            <td>
+                                                Abrigos (Antionio, Ana, Eduardo y Blanca)<br>
+                                                ALFONSO camisa x3<br>
+                                                ALFONSO y EVA alianzas<br>
+                                                ANA bolso<br>
+                                                ANA le tira una copa de vino a ALFONSO sobre la camisa<br>
+                                                ANTONIO reloj<br>
+                                                ANTONIO y ANA alianzas
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>DECORACIÓN</b></td>
+                                            <td>
+                                                Mesa/mantel con agujero para cabeza caliente<br>
+                                                Mueble bar con botellas
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>ATREZO</b></td>
+                                            <td>
+                                                Abrigos (Antionio, Ana, Eduardo y Blanca)<br>
+                                                COORD. VEST<br>
+                                                ALFONSO móvil<br>
+                                                ANA le tira una copa de vino a ALFONSO sobre la camisa<br>
+                                                ANA móvil<br>
+                                                ANTONIO intercambia el móvil con PEPE<br>
+                                                ANTONIO móvil<br>
+                                                BLANCA móvil<br>
+                                                Botella vino biodinámico<br>
+                                                Copas de vino para todos<br>
+                                                EDUARDO móvil<br>
+                                                EDUARDO recibe un recordatorio "Wednesday 3, Recordatorio. Mañana IVA."<br>
+                                                EVA móvil<br>
+                                                PEPE móvil<br>
+                                                PEPE recibe una notificación de Freeletics "Freeletics step / double / 120 sec. GO! 9, 8, 7 ...", pulsa un botón que detiene el conteo y comienza uno en sentido contrario.<br>
+                                                Plato de Redondo de ternera x 7 (x varios, comen en acción)
+                                            </td>
+
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>CÁMARA</b></td>
+                                            <td>
+                                                Easy-rig<br>
+                                                Grua<br>
+                                                PREVENIDOS cromas 3x3 y 4x4<br>
+                                                Ronin<br>
+                                                Traveling<br>
+                                                Traveling circular
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>ILUMINACIÓN</b></td>
+                                            <td>
+                                                LUNA (Fase 3)<br>
+                                                PREVENIDOS cromas 3x3 y 4x4
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>PRODUCCIÓN</b></td>
+                                            <td>
+                                                Gestionar derechos Freeletics<br>
+                                                PREVENIDOS Ventiladores para mover cortinas (coordinar FX-FISICOS)
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td><b>OBSERVACIONES</b></td>
+                                            <td align="left">
+                                                <b>- MÓVILES:</b><br>
+                                                &emsp;EUDARDO recibe un recordatorio "Wednesday 3, Recordatorio. Mañana IVA."<br>
+                                                &emsp;PEPE recibe una notificación de Freeletics "Freeletics step / double / 120 sec. Go! 9, 8, 7 ..."<br>
+                                                <b>- HORA FICCIÓN:</b><br>
+                                                &emsp;23:37<br>
+                                                <b>-NOTAS</b><br>
+                                                &emsp;RECORDATORIO MÓVIL EDUARDO sería Wednesday 6th (por calendario real)
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot style="background-color: white;">
+                                        <tr>
+                                            <th colspan="4">
+                                                <div align="right" style="margin-right: 10%;">
+                                                    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                                        Save Modifications
+                                                    </button>
+                                                    <!-- Modal -->
+                                                    <div align="center" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Guardar Modificaciones</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    ¿Está seguro de que desea guardar las modificaciones?<br>Se va a notificar a todos los usuarios (implicados)
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal"><a href="#" style="color: black;">Cancelar</a></button>
+                                                                    <button type="button" class="btn btn-primary"><a href="formulario.html" style="color: white;">Guardar y Notificar</a></button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.modal-content -->
+                                                        </div>
+                                                        <!-- /.modal-dialog -->
+                                                    </div>
+                                                    <!-- /.modal -->
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <footer style="margin-left: 5%;">
+        <i class="fa fa-copyright"></i> Tipomedia. All Rights Reserved.
+    </footer>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

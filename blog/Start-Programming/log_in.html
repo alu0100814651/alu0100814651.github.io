@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>LOG IN - START PROGRAMMING</title>
+  <link rel="shortcut icon" href="./images/html-css-js.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
 </head>
@@ -45,7 +46,7 @@
       <p id="one1">----------------</p>
       <input type="password" name="password" placeholder="Password" required pattern=".{100,}"><br><br>
         <!-- Si queremos que el password tenga un estilo en concreto, ponemos: pattern=".{6,}"-->
-      <input type="submit" value="Sign In" onclick="usrpas(document.form1.email)">
+      <input type="submit" value="Sign In" onclick="usrpas(document.form1.email, document.form1.password)">
     </form><br>
   </div>
   <footer>

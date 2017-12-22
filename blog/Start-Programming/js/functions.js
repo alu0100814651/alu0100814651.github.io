@@ -1,16 +1,34 @@
-function usrpas(inputtxt) {
+function usrpas(inputtxt, pass) {
 	var val = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 ;
-	if(inputtxt.value.match(val)) {
+	var pwd = /^[a-zA-Z0-9]{10,}$/;
+	if((inputtxt.value.match(val)) && (pass.value.match(pwd))) {
 		window.open("./main.html");
 	}
 	else {
-		alerta();
+		if(inputtxt.value.match(val)) {
+		}
+		else {
+			alerta();
+		}
+		if (pass.value.match(pwd)) {
+		}
+		else {
+			altertapass();
+		}
 	}
 }
 
 function alerta() {
-	alert("USER INCORRECT!!!! - Guay!!");
+	alert("USER INCORRECT!!!!");
+}
+
+function altertapass() {
+	alert("PASSWORD INCORRECT!!!!");
+}
+
+function redireccionarPagina() {
+	window.location.href = "log_in.html";
 }
 
 function linkedin() {

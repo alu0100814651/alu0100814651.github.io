@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML - CUESTIONARIO</title>
+	<link rel="shortcut icon" href="./images/html.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
+	<script>
+	var name = prompt("Por favor, introduce tu nombre","")
+	</script>
+
+	<script language=JavaScript>
+
+	function quiz() {
+	        var i = 0
+	        var total = document.forms.length-1
+			var ncorrect = 0
+			var response = new Array(total)	
+			var theForms = new Array(total)
+			var answer = new Array(total)
+
+			for (i = 1; i <= total; i++)
+				theForms[i] = document.forms[i-1]
+
+			for (i = 1; i <= total; i++) 
+	   			response[i] = theForms[i].answer.selectedIndex  
+
+			for (i = 1; i <= total; i++)
+				answer[i] = theForms[i].correct.value
+		
+			var flag = true
+			for (i = 1; i <= total; i++) 
+	   			if (response[i] == 0) {
+	   				alert("Atención: no has contestado la pregunta #" + i + "")
+	   				flag = false
+	   			}
+
+	   			if (flag) { 
+	   				for (i = 1; i <= total; i++) 
+	   					if (response[i] == answer[i]) ncorrect++
+	   						document.total.score.value = ncorrect
+	   					var per =  Math.round((ncorrect / total) * 100) 
+	   					document.total.percent.value = per 
+	   					document.total.outof.value = total
+	   				} 
+	   			}
+	</script>
+</head>
+<body>
+	<header>
+		<div>
+			<div class="navbar">
+				<a href="#">Home</a>
+			  	<div class="dropdown">
+			    	<button class="dropbtn">Subdivisions</button>
+			    	<div class="dropdown-content">
+			      		<a href="html.html">HTML</a>
+			      		<a href="css.html">CSS</a>
+			      		<a href="js.html">JavaScript</a>
+			    	</div>
+			  	</div>
+			    <div class="dropdown">
+			    	<button class="dropbtn">Extras</button>
+			    	<div class="dropdown-content">
+			      		<a href="html-etiquetas.html">Etiquetas de HTML</a>
+			      		<a href="html-cuestionario.html">Cuestionario de HTML</a>
+			      		<a href="js-cuestionario.html">Cuestionario de JS</a>
+			      		<a href="css-cuestionario.html">Cuestionario de CSS</a>
+			      		<a href="css-como-usar.html">Cómo usar CSS</a>
+			    	</div>
+			  	</div>
+			</div>
+		</div>
+	</header>
+
+	<br><br><br><br>
+
+	<div align=center>
+		<img src="images/css.png">
+	</div>
+
+	<br><br><br><br>
+
+	<div align=center>
+		<font face="Arial" size="3">
+			Hola <b><script language=Javascript>document.write(name);</script></b>, contesta a las siguientes preguntas:
+
+		<br><br>
+
+		<form action=esempio.htm method=post name=form1>
+
+			<font face="Arial" size="2">
+				<b>"CSS" son siglas pertenecientes a:</b>
+			</font>
+			<br><br>
+
+			<select name=answer size=1>
+				<option selected value=0>         
+				<option value=1> Cascading Sheets Style
+				<option value=2> Cascading Style Sheets :)
+				</option>
+			</select>
+			<input name=correct size=4 type=hidden value=2> 
+		</form>
+
+		<hr size="1" width="400" color="gray" noshade>
+
+		<form action=esempio.htm method=post name=form1>
+			<font face="Arial" size="2">
+				<b>¿Qué tipos de CSS hay?</b>
+			</font>
+			<br><br>
+
+			<select name=answer size=1>
+				<option selected value=0>         
+				<option value=1> Interno y Externo
+				<option value=2> Interno y Embebido
+				<option value=3> Interno, Externo y Embebido :)
+				<option value=4> Externo y Embebido
+				<option value=5> Ninguna de las anteriores
+				</option>
+			</select>
+			<input name=correct size=5 type=hidden value=3> 
+		</form>
+
+		<hr size="1" width="400" color="gray" noshade>
+
+		<form action=esempio.htm method=post name=form1>
+			<font face="Arial" size="2">
+				<b>El CSS Interno va en:</b>
+			</font>
+			<br><br>
+
+			<select name=answer size=1>
+				<option selected value=0>         
+				<option value=1> head
+				<option value=2> body
+				<option value=3> footer
+				<option value=4> Dentro de un div, fuera de del body
+				<option value=5> Ninguna de las anteriores
+				</option>
+			</select>
+			<input name=correct size=4 type=hidden value=1> 
+		</form>
+
+		<br>
+
+		<form action=TriviaQuiz.html method=post name=total>
+			<input name=Button onclick=quiz() type=button value="Enviar Respuestas">
+
+			<br><br>
+
+			<b><script language=Javascript>document.write(name);</script></b>: has contestado correctamente a <input name=score size=2> preguntas de un total de <input name=outof size=2><br><br>
+			Has obtenido un porcentaje de calificación del <input name=percent size=2>%
+			<br><br>
+
+		</font>
+	</div>
+	<footer>
+		<br>
+		<div>
+			&#169; 2017 Nitesh Gul Ramnani from <b>"START PROGRAMMING"</b>
+			<div>
+				<a onclick="linkedin()"><i class="fa fa-linkedin-square fa-4x fa-spin"></i></a>&emsp;
+				<a onclick="instagram()"><i class="fa fa-instagram fa-4x fa-spin"></i></a>&emsp;
+				<a onclick="facebook()"><i class="fa fa-facebook-square fa-4x fa-spin"></i></a>&emsp;
+				<a onclick="google()"><i class="fa fa-google-plus-square fa-4x fa-spin"></i></a>
+			</div>
+		</div>
+	</footer>
+	<script src="./js/functions.js"></script>
+</body>
+</html>

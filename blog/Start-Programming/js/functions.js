@@ -3,7 +3,7 @@ function usrpas(inputtxt, pass) {
 ;
 	var pwd = /^[a-zA-Z0-9]{10,}$/;
 	if((inputtxt.value.match(val)) && (pass.value.match(pwd))) {
-		window.open("./main.html");
+		window.open("./main.html","_self");
 	}
 	else {
 		if(inputtxt.value.match(val)) {
